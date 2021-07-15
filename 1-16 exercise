@@ -1,0 +1,275 @@
+#
+
+
+
+
+
+'''Задача 1 крастнысть 5 и 7 
+a=0
+n=0
+
+for i in range(1000,3101):
+	a=i%5
+	n=i%7
+	if a == 0 and n == 0:
+		print(i)
+'''
+'''Задача 2 красність 5 и 7 в рядок ---- безпоняття
+
+a=0
+n=0
+
+for i in range(1000,3101):
+	a=i%5
+	n=i%7
+	if a == 0 and n == 0:
+		print(i)
+'''
+''' Задача 3 Модуль числа n
+n=6
+a=1
+for i in range(2,n+1):
+	
+	a = a * i
+
+print(a)
+'''
+
+'''#Задача 4 модель за допомогою рекурсивної функції
+n = 4
+#print(n)
+def factorial(n):
+	if n == 1:
+		return n 
+		
+	else:
+
+
+		return n*factorial(n-1)
+
+factorial(n)
+print(factorial(n))
+'''
+
+'''#Задача 5 генерація словника (dict)
+
+n = 3
+dict_a = {}
+for i in range(1,n+1):
+
+	dict_a[i] = i*i
+
+print(dict_a)
+'''
+
+#Задача 6 ---  не понятно
+'''#Задача 7 перетворення str в tuple
+
+a = '1 2 3 4 5 6 7 8'
+n = ()
+b = ' '
+for i in range(0,len(a)):
+	if a[i] != b:
+		n =n + tuple(a[i])
+		
+print(n)
+'''
+
+'''#Задача 8 
+a = 'aaa,bbb,fff,zzz,eee,ccc'
+d = []
+c = []
+
+def function():
+	d = a.split(',')
+	d.sort()
+	print(d)
+
+	return d
+function()
+
+'''
+
+'''#Задача 9 функція приямає список рядків та виводеть
+# коден рядок роблячи першу букву слова великою
+
+a = 'one best'
+b = 'two best'
+c = 'three best'
+n = 0
+d = [a , b, c]
+
+
+def function(d):
+	
+	for x in d:
+		x = x.title()
+		print(x)
+		global n
+		d[n] = x
+		n = n + 1
+
+	pass
+function(d)
+print(d)
+'''
+
+'''#Задача 10 
+
+a = 'one two three four five one four'
+#y = 'one two three one four five four one'
+b = []
+c = {1,2,3}
+
+def function1(a):
+	c.clear()
+	b = a.split()
+	print(b)
+	c.update(b)
+	for x in c:
+		b.append(x)
+
+
+	return c
+function1(a)
+print(c)
+'''
+
+'''#Задача 11  Двійкові числа кратні 5
+
+a = '1010,1001,0110,1110,1101,1111'
+b = []
+answer = []
+d = 0
+binar = 0
+def function():
+
+	b = a.split(',')
+	for i in range(0,len(b)):
+
+		d = int(b[i],2)
+		if d % 5 == 0:
+			binar = bin(d)
+
+			answer.append(binar)
+	
+	return answer
+
+
+function()
+print(answer)
+'''
+
+'''#Задача 12
+
+a = 2
+d = 0
+def function(a):
+	d = a+a*a+a*a*a+a*a*a*a
+	return d
+
+print(function(a))
+'''
+
+'''#Задача 13 
+
+password = "Qwert123@"
+t = True
+
+def function():
+	
+	if len(password) <= 6:
+		print('Minimum length of transaction password: 6')
+
+	elif len(password) >= 12:
+		print('Maximum length of transaction password: 12')
+
+	elif password.islower() == t:
+		print('At least 1 letter between [A-Z]')
+
+	elif password.isalpha() == t:
+		print('At least 1 number between [0-9]')
+
+	elif password.isdigit() == t:
+		print('At least 1 letter between [a-z]')
+
+	elif password.isalnum() == t:
+		print('3. At least 1 character from [$#@]')
+
+	#for i in range(0,len(password))
+	else:
+		print('Password - correct')
+	return t
+function()
+print(t)
+'''
+'''#Задача 15
+
+import math
+way = ['1 UP', '2 DOWN', '2 RIGHT', '3 LEFT']
+
+up = "U"
+down = "D"
+right = "R"
+left = "L"
+
+distance = 0
+def function():
+	y = 0
+	x = 0
+	for i in range(0,len(way)):
+		b = way[i]
+		num = int(b[0])
+		direction = b[2]
+		if direction == up:
+			y = y +  num
+		elif direction == down:
+			y = y - num
+		elif direction == right:
+			x = x + num
+		elif direction == left:
+			x = x - num
+	x = pow(x,2)
+	y = pow(y,2)
+	distance = x + y
+	distance = math.sqrt(distance)
+	return distance
+
+function()
+print(function())
+'''
+
+'''#Завдання 16
+
+text = 'ccc , aa , dddddddd , aa , bbbb , aa , ccc , bbbb aa'
+text1 = ''
+words = []
+frequency = 0
+last = []
+lastdict = {}
+sortalf = []
+def function():
+	frequency = 0
+	text1 = text.replace("," , " ")
+	words = text1.split()
+	words.sort()
+	for i in range(0,len(words)):
+		frequency = 0
+		for n in range(0,len(words)):
+			if words[i] == words[n]:
+				frequency = frequency + 1
+		lastdict[words[i]] = frequency	
+
+	print(lastdict)
+
+	return lastdict
+
+function()
+
+'''
+
+
+
+
+
+
